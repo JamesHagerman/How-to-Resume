@@ -1,9 +1,5 @@
-#
-# Think
-# Do they care about your objectives?
-# Do they care about your schooling?
-# Do they care about your hobby bullshit?
-#
+# Tell make to be quieter
+MAKEFLAGS += --silent
 
 # Running `make` alone will run `all` target. By defautl, this performs:
 #  - Cleaning out the old README.md
@@ -15,7 +11,7 @@ all: clean pdf publish
 
 
 pdf: README.md
-	pandoc -r markdown_github -o resume-`date +%Y-%m-%d`.pdf \
+	pandoc -r gfm -o resume-`date +%Y-%m-%d`.pdf \
 	README.md -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm"
 
 publish: README.md
