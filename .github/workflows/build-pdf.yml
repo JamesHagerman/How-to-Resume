@@ -1,0 +1,20 @@
+name: Build PDF
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Combine snippets into README.md
+        run: make clean README.md
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: -r gfm -o resume-ci.pdf README.md -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm"
+      - name: Add date to generated PDF
+        run: mv resume-ci.pdf resume-ci-`date +%Y-%m-%d`.pdf
+      - uses: actions/upload-artifact@v3
+        with:
+          name: resume-ci
+          path: resume-ci-*
