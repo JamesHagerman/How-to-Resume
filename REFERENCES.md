@@ -1,5 +1,3 @@
 # References
 
-I need to keep track of a long historical list of references so I don't have to go digging all the time.
-
-This is a good place to put that information.
+Keeping track of references over many years gets very tedious. Put that information here to avoid digging for it every time you switch jobs.
