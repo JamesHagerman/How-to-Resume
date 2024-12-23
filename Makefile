@@ -21,11 +21,11 @@ README.md:
 	cat \
 	snippets/contact-header-personal.md \
 	snippets/links.md \
-	snippets/about-me.md \
-	snippets/qualifications.md \
 	objectives/general.md \
-	snippets/employers-short.md \
+	employment/long.md \
 	snippets/education.md \
+	snippets/qualifications.md \
+	snippets/about-me.md \
 	>> README.md
 
 #	objectives/infosec.md \

@@ -1,4 +1,4 @@
-## Summary of Qualifications
+## Qualifications
 
 * Places emphasis on simplicity when possible
 
